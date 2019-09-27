@@ -8,11 +8,11 @@ const breads = [
 ];
 
 const printBreadOptions = () => {
-    let domString = '';
+    let domString = '<h3>Bread:</h3>';
     for (let i = 0; i < breads.length; i++) {
         domString += `
         <div>
-            <input type="radio" id="${breads[i].id} " name="bread" value="${breads[i].id}">
+            <input type="radio" id="${breads[i].id}" name="bread" value="${breads[i].id}">
             <label for="${breads[i].id}">${breads[i].name}</label>
         </div>
         `;

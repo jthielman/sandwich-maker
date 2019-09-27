@@ -1,3 +1,15 @@
 body {
     background-color: forestgreen;
 }
+
+h1 {
+    text-align: center;
+}
+
+#breadrow {
+    justify-content: center;
+}
+
+#bread {
+    width: fit-content;
+}
