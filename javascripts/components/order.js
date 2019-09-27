@@ -1,4 +1,5 @@
 import bread from './bread.js';
+import meat from './meat.js';
 import utilities from '../helpers/utilities.js';
 
 const shapeEndSandwich = (stuff) => {
@@ -35,7 +36,9 @@ const shapeEndSandwich = (stuff) => {
 
 const makeOrderEvent = () => {
     const chosenBread = bread.getChosenBread();
-    shapeEndSandwich(chosenBread);
+    const chosenMeat = meat.getChosenMeats();
+    const chosenSandwich = chosenBread.concat(chosenMeat);
+    shapeEndSandwich(chosenSandwich);
 };
 
 const printEnterButton = () => {

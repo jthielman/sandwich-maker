@@ -38,6 +38,7 @@ h1 {
 
 .list-group-item {
     background-color: forestgreen;
+    border: none;
 }
 
 #total-cost {
