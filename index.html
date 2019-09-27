@@ -9,8 +9,37 @@
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    <button class="btn btn-warning">don't click</button>
+    <h1>Sandwich Maker</h1>
+    <div class="row">
+        <div id="bread" class="col">
+                <div>
+                        <input type="radio" id="bread1" name="bread" value="bread1">
+                        <label for="bread1">White</label>
+                      </div>
+                      
+                      <div>
+                        <input type="radio" id="dewey" name="drone" value="dewey">
+                        <label for="dewey">Dewey</label>
+                      </div>
+                      
+                      <div>
+                        <input type="radio" id="louie" name="drone" value="louie">
+                        <label for="louie">Louie</label>
+                      </div>
+                      
+        </div>
+    </div>
+    <div class="row">
+        <div id="meats" class="col"></div>
+        <div id="cheeses" class="col"></div>
+        <div id="condiments" class="col"></div>
+        <div id="veggies" class="col"></div>
+    </div>
+    <div><button class="btn btn-warning">don't click</button></div>
+    <div id="order"></div>
+    <div></div>
     
-    <script src="./javascripts/main.js"></script>
+    
+    <script type="module" src="./javascripts/main.js"></script>
 </body>
 </html>
