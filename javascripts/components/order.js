@@ -1,5 +1,6 @@
 import bread from './bread.js';
 import cheese from './cheese.js';
+import condiments from './condiments.js';
 import meat from './meat.js';
 import utilities from '../helpers/utilities.js';
 
@@ -39,6 +40,7 @@ const makeOrderEvent = () => {
     const chosenBread = bread.getChosenBread();
     const chosenMeat = meat.getChosenMeats();
     const chosenCheese = cheese.getChosenCheeses();
+    const chosenCondiment = condiments.getChosenCondiments();
     const chosenSandwich = chosenBread.concat(chosenMeat, chosenCheese);
     shapeEndSandwich(chosenSandwich);
 };
