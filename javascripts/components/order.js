@@ -3,6 +3,7 @@ import cheese from './cheese.js';
 import condiments from './condiments.js';
 import meat from './meat.js';
 import utilities from '../helpers/utilities.js';
+import veggies from './veggies.js';
 
 const shapeEndSandwich = (stuff) => {
     let domString2 = '<ul class="list-group list-group-flush">';
@@ -41,7 +42,8 @@ const makeOrderEvent = () => {
     const chosenMeat = meat.getChosenMeats();
     const chosenCheese = cheese.getChosenCheeses();
     const chosenCondiment = condiments.getChosenCondiments();
-    const chosenSandwich = chosenBread.concat(chosenMeat, chosenCheese);
+    const chosenVeggie = veggies.getChosenVeggies();
+    const chosenSandwich = chosenBread.concat(chosenMeat, chosenCheese, chosenCondiment, chosenVeggie);
     shapeEndSandwich(chosenSandwich);
 };
 
