@@ -1,10 +1,10 @@
 import utilities from '../helpers/utilities.js';
 
 const breads = [
-    {id: "bread1", name: "White", price: 90},
-    {id: "bread1", name: "Wheat", price: 90},
-    {id: "bread1", name: "Sourdough", price: 90},
-    {id: "bread1", name: "Rye", price: 90}
+    {id: "bread1", name: "White", price: 140},
+    {id: "bread2", name: "Wheat", price: 140},
+    {id: "bread3", name: "Sourdough", price: 150},
+    {id: "bread4", name: "Rye", price: 160}
 ];
 
 const printBreadOptions = () => {
@@ -12,7 +12,7 @@ const printBreadOptions = () => {
     for (let i = 0; i < breads.length; i++) {
         domString += `
         <div>
-            <input type="radio" id="${breads[i].id}" name="bread" value="${breads[i].id}">
+            <input type="radio" id="${breads[i].id}" class="bread" name="bread" value="${breads[i].id}">
             <label for="${breads[i].id}">${breads[i].name}</label>
         </div>
         `;
@@ -20,4 +20,18 @@ const printBreadOptions = () => {
     utilities.printToDom('bread', domString);
 };
 
-export default { printBreadOptions };
+const getChosenBread = () => {
+    const chosenBread = [];
+    // get all bread radio buttons
+    const breadRadios = document.getElementsByClassName('bread');
+    // keep checked one in a new array
+    for (let j = 0; j < breadRadios.length; j++) {
+        if (breadRadios[j].checked) {
+            chosenBread.push(breads[j]);
+        }
+    }
+    // return the new array
+    return chosenBread;
+};
+
+export default { printBreadOptions, getChosenBread };

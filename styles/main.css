@@ -13,3 +13,33 @@ h1 {
 #bread {
     width: fit-content;
 }
+
+#enter-button-holder {
+    display: flex;
+    justify-content: center;
+}
+
+#order-row {
+    display: flex;
+    justify-content: center;
+}
+
+#order {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid darkgreen;
+    padding: 1em;
+    margin: 1em;
+}
+
+.list-group-flush {
+    width: 100%;
+}
+
+.list-group-item {
+    background-color: forestgreen;
+}
+
+#total-cost {
+    border-top: 2px solid black;
+}
