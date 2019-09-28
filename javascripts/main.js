@@ -12,6 +12,7 @@ const init = () => {
     condiments.printCondimentOptions();
     veggies.printVeggieOptions();
     order.printEnterButton();
+    order.printOrderButton();
 };
 
 init();

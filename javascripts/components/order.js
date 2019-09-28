@@ -54,9 +54,9 @@ const printEnterButton = () => {
 };
 
 const printOrderButton = () => {
-    const orderButtonString = '<button id="order-it-already" class="btn btn-info">ORDER SANDWICH!!</button>';
+    const orderButtonString = '<button id="order-it-already" class="btn btn-warning">ORDER SANDWICH!!</button>';
     utilities.printToDom('order-button', orderButtonString);
     document.getElementById('order-it-already').addEventListener('click', () => {alert('Thank you for your order.  Alas, you still get no sandwich.')});
 };
 
-export default { printEnterButton };
+export default { printEnterButton, printOrderButton };
