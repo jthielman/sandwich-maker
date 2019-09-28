@@ -16,7 +16,7 @@ const printBreadOptions = () => {
             <label for="${breads[i].id}">${breads[i].name}</label>
         </div>
         `;
-    }
+    };
     utilities.printToDom('bread', domString);
 };
 
@@ -24,12 +24,12 @@ const getChosenBread = () => {
     const chosenBread = [];
     // get all bread radio buttons
     const breadRadios = document.getElementsByClassName('bread');
-    // keep checked one in a new array
+    // keep checked one(s) in a new array
     for (let j = 0; j < breadRadios.length; j++) {
         if (breadRadios[j].checked) {
             chosenBread.push(breads[j]);
-        }
-    }
+        };
+    };
     // return the new array
     return chosenBread;
 };

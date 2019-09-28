@@ -17,12 +17,12 @@ const shapeEndSandwich = (stuff) => {
                 <h5>$${(stuff[i].price / 100).toFixed(2)}</h5>
             </div>
         </li>
-        `
+        `;
     };
     let cost = 0;
     for (let j = 0; j < stuff.length; j++) {
         cost += stuff[j].price;
-    }
+    };
     domString2 += `
         <li id="total-cost" class="list-group-item d-flex justify-content-between align-items-center">
             <div>
@@ -32,8 +32,8 @@ const shapeEndSandwich = (stuff) => {
                 <h4>$${(cost / 100).toFixed(2)}</h4>
             </div>
         </li>
-        `
-    domString2 += '</ul>'
+        `;
+    domString2 += '</ul>';
     utilities.printToDom('order', domString2);
 };
 
@@ -51,6 +51,12 @@ const printEnterButton = () => {
     const domString = '<button id="enter-button" class="btn btn-success">Enter</button>';
     utilities.printToDom('enter-button-holder', domString);
     document.getElementById('enter-button').addEventListener('click', makeOrderEvent);
+};
+
+const printOrderButton = () => {
+    const orderButtonString = '<button id="order-it-already" class="btn btn-info">ORDER SANDWICH!!</button>';
+    utilities.printToDom('order-button', orderButtonString);
+    document.getElementById('order-it-already').addEventListener('click', () => {alert('Thank you for your order.  Alas, you still get no sandwich.')});
 };
 
 export default { printEnterButton };

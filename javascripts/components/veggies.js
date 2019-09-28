@@ -17,7 +17,7 @@ const printVeggieOptions = () => {
             <label for="${veggies[i].id}">${veggies[i].name}</label>
         </div>
         `;
-    }
+    };
     utilities.printToDom('veggies', domString);
 };
 
@@ -30,9 +30,9 @@ const getChosenVeggies = () => {
         for (let k = 0; k < veggies.length; k++) {
             if (veggieCheckboxes[j].checked && veggieCheckboxes[j].id === veggies[k].id) {
                 chosenVeggies.push(veggies[k]);
-            }
-        }
-    }
+            };
+        };
+    };
     
     // return the new array
     return chosenVeggies;

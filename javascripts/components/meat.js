@@ -17,7 +17,7 @@ const printMeatOptions = () => {
             <label for="${meats[i].id}">${meats[i].name}</label>
         </div>
         `;
-    }
+    };
     utilities.printToDom('meats', domString);
 };
 
@@ -30,9 +30,9 @@ const getChosenMeats = () => {
         for (let k = 0; k < meats.length; k++) {
             if (meatCheckboxes[j].checked && meatCheckboxes[j].id === meats[k].id) {
                 chosenMeats.push(meats[k]);
-            }
-        }
-    }
+            };
+        };
+    };
     
     // return the new array
     return chosenMeats;
