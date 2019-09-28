@@ -17,7 +17,7 @@ const printCondimentOptions = () => {
             <label for="${condiments[i].id}">${condiments[i].name}</label>
         </div>
         `;
-    }
+    };
     utilities.printToDom('condiments', domString);
 };
 
@@ -30,9 +30,9 @@ const getChosenCondiments = () => {
         for (let k = 0; k < condiments.length; k++) {
             if (condimentCheckboxes[j].checked && condimentCheckboxes[j].id === condiments[k].id) {
                 chosenCondiments.push(condiments[k]);
-            }
-        }
-    }
+            };
+        };
+    };
     
     // return the new array
     return chosenCondiments;

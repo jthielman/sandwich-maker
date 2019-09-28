@@ -3,6 +3,7 @@ import cheese from './cheese.js';
 import condiments from './condiments.js';
 import meat from './meat.js';
 import utilities from '../helpers/utilities.js';
+import veggies from './veggies.js';
 
 const shapeEndSandwich = (stuff) => {
     let domString2 = '<ul class="list-group list-group-flush">';
@@ -16,12 +17,12 @@ const shapeEndSandwich = (stuff) => {
                 <h5>$${(stuff[i].price / 100).toFixed(2)}</h5>
             </div>
         </li>
-        `
+        `;
     };
     let cost = 0;
     for (let j = 0; j < stuff.length; j++) {
         cost += stuff[j].price;
-    }
+    };
     domString2 += `
         <li id="total-cost" class="list-group-item d-flex justify-content-between align-items-center">
             <div>
@@ -31,8 +32,8 @@ const shapeEndSandwich = (stuff) => {
                 <h4>$${(cost / 100).toFixed(2)}</h4>
             </div>
         </li>
-        `
-    domString2 += '</ul>'
+        `;
+    domString2 += '</ul>';
     utilities.printToDom('order', domString2);
 };
 
@@ -41,7 +42,8 @@ const makeOrderEvent = () => {
     const chosenMeat = meat.getChosenMeats();
     const chosenCheese = cheese.getChosenCheeses();
     const chosenCondiment = condiments.getChosenCondiments();
-    const chosenSandwich = chosenBread.concat(chosenMeat, chosenCheese);
+    const chosenVeggie = veggies.getChosenVeggies();
+    const chosenSandwich = chosenBread.concat(chosenMeat, chosenCheese, chosenCondiment, chosenVeggie);
     shapeEndSandwich(chosenSandwich);
 };
 
@@ -51,4 +53,10 @@ const printEnterButton = () => {
     document.getElementById('enter-button').addEventListener('click', makeOrderEvent);
 };
 
-export default { printEnterButton };
+const printOrderButton = () => {
+    const orderButtonString = '<button id="order-it-already" class="btn btn-warning">ORDER SANDWICH!!</button>';
+    utilities.printToDom('order-button', orderButtonString);
+    document.getElementById('order-it-already').addEventListener('click', () => {alert('Thank you for your order.  Alas, you still get no sandwich.')});
+};
+
+export default { printEnterButton, printOrderButton };

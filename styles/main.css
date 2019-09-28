@@ -14,7 +14,8 @@ h1 {
     width: fit-content;
 }
 
-#enter-button-holder {
+#enter-button-holder,
+#order-button {
     display: flex;
     justify-content: center;
 }

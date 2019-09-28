@@ -17,7 +17,7 @@ const printCheeseOptions = () => {
             <label for="${cheeses[i].id}">${cheeses[i].name}</label>
         </div>
         `;
-    }
+    };
     utilities.printToDom('cheeses', domString);
 };
 
@@ -30,9 +30,9 @@ const getChosenCheeses = () => {
         for (let k = 0; k < cheeses.length; k++) {
             if (cheeseCheckboxes[j].checked && cheeseCheckboxes[j].id === cheeses[k].id) {
                 chosenCheeses.push(cheeses[k]);
-            }
-        }
-    }
+            };
+        };
+    };
     
     // return the new array
     return chosenCheeses;
