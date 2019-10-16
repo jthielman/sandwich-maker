@@ -1,25 +1,17 @@
 # Sandwich Maker
 
 ## Description
-This app allows a user to convert temperatures from degrees Fahrenheit to degrees Celsius or vice versa.  The result of the conversion is displayed in a box at the bottom of the page and is color coded according to whether it is a hot, cold or middling temperature.
+This app allows a user to choose ingredients for a sandwich.  The user has a choice of breads, cheeses, meats, veggies and condiments.  When the Enter button is clicked, the user's chosen ingredients are listed along with their unrealistically low prices at the bottom of the page, along with the total price.  There is also an ORDER SANDWICH button, which, when clicked, causes an alert to inform the user that no sandwich is forthcoming after all.
 
 ## Screenshots
 The main view:
 
-![Main View](https://raw.githubusercontent.com/jthielman/temperature-converter/master/screenshots/main_view.png)
+![Main View](https://raw.githubusercontent.com/jthielman/sandwich-maker/master/screenshots/main_view.png)
 
-### Converting temperatures
-A hot temperature displays red:
+Various ingredients chosen and the prices and total displayed:
 
-![A hot temperature converted](https://raw.githubusercontent.com/jthielman/temperature-converter/master/screenshots/hot.png)
+![Ingredients chosen and priced out](https://raw.githubusercontent.com/jthielman/sandwich-maker/master/screenshots/sandwich.png)
 
-A cold temperature displays blue:
-
-![A cold temperature converted](https://raw.githubusercontent.com/jthielman/temperature-converter/master/screenshots/cold.png)
-
-A middling temperature displays green:
-
-![A middling temperature converted](https://raw.githubusercontent.com/jthielman/temperature-converter/master/screenshots/middling.png)
 
 ## How to Run
 - Clone down this project
